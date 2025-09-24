@@ -8,7 +8,7 @@ export default function SkillsSection() {
       className="position-relative py-5"
       style={{ marginTop: "-120px" }} // overlap About section
     >
-      <div className="container bg-white rounded-5 shadow-sm p-0 overflow-hidden">
+      <div className="container bg-white rounded-5 shadow-lg p-0 overflow-hidden">
         <div className="row text-center g-0">
           {/* Development */}
           <div className="col-md-4 p-5 bg-light border">

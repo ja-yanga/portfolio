@@ -3,6 +3,7 @@ import Nav from "../../components/Nav";
 import HomeSection from "../../components/HomeSection";
 import AboutSection from "../../components/AboutSection";
 import SkillsSection from "../../components/SkillsSection";
+import ProjectsSection from "../../components/ProjectsSection";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
         <HomeSection />
         <AboutSection />
         <SkillsSection />
+        <ProjectsSection />
       </main>
     </>
   );
