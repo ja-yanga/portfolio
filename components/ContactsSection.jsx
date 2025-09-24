@@ -20,7 +20,7 @@ export default function ContactsSection() {
                 <li className="mb-3">
                   📧{" "}
                   <a
-                    href="#contact"
+                    href="mailto:allenyanga34@gmail.com"
                     className="text-light text-decoration-none"
                   >
                     allenyanga34@gmail.com
@@ -35,6 +35,15 @@ export default function ContactsSection() {
                     className="text-light text-decoration-none"
                   >
                     https://www.linkedin.com/in/jon-allen-yanga-7702a5320/
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/JonAllenCapulongYanga_Resume.pdf"
+                    download
+                    className="btn btn-danger btn-sm mt-2"
+                  >
+                    Download My Resume
                   </a>
                 </li>
               </ul>
