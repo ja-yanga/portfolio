@@ -27,7 +27,7 @@ export default function HomeSection() {
             <h1 className="mb-3">
               Full-Stack Developer | QA Tester | Web Enthusiast
             </h1>
-            <p className="lead">
+            <p className="lead fw-normal">
               I design, build, and test modern web apps with clean, reliable
               user experiences.
             </p>

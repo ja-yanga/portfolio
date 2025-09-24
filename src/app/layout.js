@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "My App",
-  description: "Next.js + Bootstrap",
+  title: "Jon Allen C. Yanga",
+  description: "Portfolio made with Next.js + Bootstrap CSS",
 };
 
 export default function RootLayout({ children }) {

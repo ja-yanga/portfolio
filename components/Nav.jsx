@@ -2,9 +2,13 @@ import React from "react";
 
 export default function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white px-md-5 py-md-4 px-3 py-4 shadow-sm">
-      <a className="navbar-brand fw-bold text-danger" href="/">
-        JON ALLEN YANGA
+    <nav className="navbar navbar-expand-lg navbar-light bg-white px-md-5 py-md-4 px-3 py-4">
+      <a
+        className="navbar-brand fw-bold text-danger"
+        href="/"
+        title="Jon Allen Capulong Yanga"
+      >
+        <span className="h2 fw-bold">J.A.C.Y</span>
       </a>
       <button
         className="navbar-toggler"
@@ -20,27 +24,27 @@ export default function Nav() {
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#home">
+            <a className="nav-link fw-medium" href="#home">
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#about">
+            <a className="nav-link fw-medium" href="#about">
               About
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#skills">
+            <a className="nav-link fw-medium" href="#skills">
               Skills
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#projects">
+            <a className="nav-link fw-medium" href="#projects">
               Projects
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#contact">
+            <a className="nav-link fw-medium" href="#contact">
               Contact
             </a>
           </li>
