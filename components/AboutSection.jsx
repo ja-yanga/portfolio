@@ -10,7 +10,7 @@ export default function AboutSection() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-6 text-center text-md-start mb-4 mb-md-0">
-            <h2 className="mb-3">About Me</h2>
+            <h2 className="mb-3 mt-sm-0 mt-5">About Me</h2>
             <p className="lead fw-normal">
               I’m Jon Allen C. Yanga, an Aspiring Full-Stack Developer and QA
               Tester passionate about building reliable web applications. I
