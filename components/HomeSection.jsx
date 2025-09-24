@@ -3,9 +3,13 @@ import Image from "next/image";
 
 export default function HomeSection() {
   return (
-    <section id="home" className="py-5 bg-white">
+    <section
+      id="home"
+      className="d-flex align-items-center min-vh-100 bg-white"
+    >
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-center justify-content-center">
+          {/* Profile image */}
           <div className="col-md-4 text-md-center order-1 order-md-2 mb-4 mb-md-0 text-center">
             <Image
               src="/mainphoto.jpg"
@@ -17,7 +21,8 @@ export default function HomeSection() {
             />
           </div>
 
-          <div className="col-md-8 order-2 order-md-1">
+          {/* Intro text */}
+          <div className="col-md-8 order-2 order-md-1 text-center text-md-start">
             <h5 className="mb-2">👋 Hi, I’m Allen</h5>
             <h1 className="mb-3">
               I’m a Full-Stack Developer, QA Tester, and Web Enthusiast.
