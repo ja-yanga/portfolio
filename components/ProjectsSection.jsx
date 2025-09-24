@@ -95,7 +95,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="py-5 bg-white">
-      <div className="container">
+      <div className="container mb-5">
         <h2 className="mb-5 text-center">Recent Projects</h2>
 
         <div className="row g-4">

@@ -87,8 +87,7 @@ export default function SkillsSection() {
 
             <h6 className="lead text-danger fw-normal">Automation</h6>
             <ul className="list-unstyled">
-              <li>Robot Framework</li>
-              <li>SeleniumLibrary</li>
+              <li>Robot Framework (Selenium Library)</li>
             </ul>
           </div>
 
@@ -126,7 +125,6 @@ export default function SkillsSection() {
               <li>Jira / Confluence</li>
               <li>Postman</li>
               <li>Google Analytics API</li>
-              <li>Panolens API</li>
             </ul>
           </div>
         </div>

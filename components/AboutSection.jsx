@@ -13,15 +13,22 @@ export default function AboutSection() {
             <h2 className="mb-3">About Me</h2>
             <p className="lead">
               I’m Allen, a Full-Stack Developer and QA Tester passionate about
-              building reliable web apps. I graduated from UST with a BSIT
-              degree. My capstone project, ArtDive, allowed me to create a
-              virtual museum experience for the UST Museum.
+              building reliable web applications. I graduated with a BSIT degree
+              from the University of Santo Tomas.
             </p>
             <p>
-              When I’m not coding, you can find me playing guitar or exploring
-              new technologies.
+              I gained industry experience as a{" "}
+              <strong>Quality Assurance Intern at ABS-CBN Corporation</strong>,
+              where I tested features, documented bugs, and collaborated with
+              developers to improve product quality. My capstone project,{" "}
+              <strong>ArtDive</strong>, was a virtual museum web app created for
+              the UST Museum, where I worked on both the front-end and back-end.
             </p>
-            <div className="d-flex flex-wrap gap-2 mt-3">
+            <p>
+              Outside of tech, I enjoy playing guitar and exploring new
+              technologies.
+            </p>
+            <div className="d-flex flex-wrap gap-2 mt-3 justify-content-center justify-content-md-start">
               <span className="badge bg-primary">Next.js</span>
               <span className="badge bg-warning text-dark">React.js</span>
               <span className="badge bg-success">MongoDB</span>
