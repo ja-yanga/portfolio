@@ -1,19 +1,26 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import "../styles/Projects.css";
 
 export default function ProjectsSection() {
   const projects = [
     {
       title: "My Portfolio",
-      description: "Portfolio Web App made with Next.js (React.js Framework)",
+      description: "Portfolio Web App showcasing projects and skills.",
       images: ["/portfolio.png"],
       link: "/",
+      technologies: ["Next.js", "React.js", "Bootstrap", "CSS"],
+      role: [
+        "Designed and developed personal portfolio website",
+        "Showcases projects, skills, and work experience",
+        "Responsive layout for desktop and mobile",
+      ],
     },
     {
       title: "ArtDive",
       description:
-        "360° Virtual Museum Tour for UST Museum using Next.js, React, Panolens API, and MongoDB backend.",
+        "360° Virtual Museum Tour for UST Museum with interactive features and 360° navigation.",
       images: [
         "/artdive.png",
         "/artdive1.png",
@@ -21,14 +28,44 @@ export default function ProjectsSection() {
         "/artdive3.png",
         "/artdive4.png",
       ],
-      link: "#",
+      link: "https://artdive.vercel.app/",
+      technologies: [
+        "Next.js, React.js, Panolens API",
+        "MongoDB Backend",
+        "Bootstrap, Custom CSS",
+        "Google Analytics API",
+      ],
+      role: [
+        "Full-Stack Web Developer",
+        "Built interactive 360° virtual tour",
+        "Developed responsive CMS for content management",
+        "Integrated media-rich content and conducted UAT for feedback",
+        "Implemented Google Login for authentication",
+      ],
     },
     {
       title: "VLCT Portal",
       description:
-        "E-commerce website with Next.js, React, MongoDB, and Bootstrap.",
-      images: ["/vlct1.png"], // normalize to array
-      link: "#",
+        "E-commerce website for managing users, orders, and inventory.",
+      images: [
+        "/vlct.png",
+        "/vlct1.png",
+        "/vlct2.png",
+        "/vlct3.png",
+        "/vlct4.png",
+      ],
+      technologies: [
+        "Next.js, React.js, Bootstrap",
+        "MongoDB Database",
+        "Axios for data fetching",
+        "GitHub for version control",
+      ],
+      role: [
+        "Full-Stack Web Developer",
+        "Developed front-end and back-end components",
+        "Built admin dashboard for user/order/inventory management",
+        "Ensured responsive design across devices",
+      ],
     },
   ];
 
@@ -66,10 +103,9 @@ export default function ProjectsSection() {
             <div
               key={idx}
               className="col-md-4"
-              style={{ cursor: "pointer" }}
               onClick={() => setSelectedProject(project)}
             >
-              <div className="card h-100 shadow-sm bg-danger p-1 text-light">
+              <div className="card h-100 shadow-sm bg-danger p-3 text-light project-card">
                 <div
                   className="position-relative"
                   style={{ width: "100%", paddingTop: "56.25%" }}
@@ -110,26 +146,26 @@ export default function ProjectsSection() {
                     onClick={closeModal}
                   ></button>
                 </div>
-                <div className="modal-body text-center">
-                  <div className="position-relative">
+                <div className="modal-body">
+                  {/* Carousel / Single Image */}
+                  <div className="position-relative mb-3 text-center">
                     <Image
                       src={selectedProject.images[currentImage]}
                       alt={`${selectedProject.title} ${currentImage + 1}`}
                       width={800}
                       height={450}
-                      className="img-fluid mb-3"
+                      className="img-fluid border border-2"
                     />
-
                     {selectedProject.images.length > 1 && (
                       <>
                         <button
-                          className="btn btn-danger position-absolute top-50 start-0 translate-middle-y"
+                          className="btn btn-dark position-absolute top-50 start-0 translate-middle-y"
                           onClick={prevImage}
                         >
                           ◀
                         </button>
                         <button
-                          className="btn btn-danger position-absolute top-50 end-0 translate-middle-y"
+                          className="btn btn-dark position-absolute top-50 end-0 translate-middle-y"
                           onClick={nextImage}
                         >
                           ▶
@@ -138,7 +174,34 @@ export default function ProjectsSection() {
                     )}
                   </div>
 
-                  <p>{selectedProject.description}</p>
+                  {/* Project Overview */}
+                  <p className="mb-4">{selectedProject.description}</p>
+
+                  {/* Technologies Used */}
+                  {selectedProject.technologies && (
+                    <div className="mb-3">
+                      <h6 className="fw-bold">Technologies Used:</h6>
+                      <ul className="text-start">
+                        {selectedProject.technologies.map((tech, idx) => (
+                          <li key={idx}>{tech}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Role / Contributions */}
+                  {selectedProject.role && (
+                    <div className="mb-3">
+                      <h6 className="fw-bold">Role & Contributions:</h6>
+                      <ul className="text-start">
+                        {selectedProject.role.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Project Link */}
                   {selectedProject.link && (
                     <a
                       href={selectedProject.link}
