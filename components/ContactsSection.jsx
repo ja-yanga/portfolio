@@ -3,7 +3,7 @@ import React from "react";
 export default function ContactsSection() {
   return (
     <section
-      id="contacts"
+      id="contact"
       className="d-flex align-items-center min-vh-100 bg-danger text-light"
     >
       <div className="container text-center">
