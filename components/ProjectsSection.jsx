@@ -46,7 +46,7 @@ export default function ProjectsSection() {
     {
       title: "VLCT Portal",
       description:
-        "E-commerce website for managing users, orders, and inventory.",
+        "An E-commerce website for managing users, orders, and inventory.",
       images: [
         "/vlct.png",
         "/vlct1.png",
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-5 bg-white">
       <div className="container mb-5">
-        <h2 className="mb-5 text-center">Recent Projects</h2>
+        <h2 className="mb-5 text-center">My Recent Projects</h2>
 
         <div className="row g-4">
           {projects.map((project, idx) => (
@@ -105,7 +105,7 @@ export default function ProjectsSection() {
               className="col-md-4"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="card h-100 shadow-sm bg-danger p-3 text-light project-card">
+              <div className="card h-100 shadow-sm bg-dark p-3 text-light project-card">
                 <div
                   className="position-relative"
                   style={{ width: "100%", paddingTop: "56.25%" }}
@@ -119,6 +119,20 @@ export default function ProjectsSection() {
                 </div>
                 <div className="card-body text-center">
                   <h5 className="card-title">{project.title}</h5>
+
+                  {/* Tech badges */}
+                  <div className="d-flex flex-wrap justify-content-center gap-1 mt-2">
+                    {project.technologies.slice(0, 3).map((tech, idx) => (
+                      <span key={idx} className="badge bg-danger text-light">
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 3 && (
+                      <span className="badge bg-danger">
+                        +{project.technologies.length - 3}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,14 +152,27 @@ export default function ProjectsSection() {
               role="document"
             >
               <div className="modal-content">
-                <div className="modal-header">
+                <div className="modal-header d-flex justify-content-between align-items-center">
                   <h5 className="modal-title">{selectedProject.title}</h5>
-                  <button
-                    type="button"
-                    className="btn-close"
-                    onClick={closeModal}
-                  ></button>
+                  <div className="d-flex gap-2">
+                    {selectedProject.link && (
+                      <a
+                        href={selectedProject.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-danger btn-sm"
+                      >
+                        View Project
+                      </a>
+                    )}
+                    <button
+                      type="button"
+                      className="btn-close"
+                      onClick={closeModal}
+                    ></button>
+                  </div>
                 </div>
+
                 <div className="modal-body">
                   {/* Carousel / Single Image */}
                   <div className="position-relative mb-3 text-center">
@@ -199,18 +226,6 @@ export default function ProjectsSection() {
                         ))}
                       </ul>
                     </div>
-                  )}
-
-                  {/* Project Link */}
-                  {selectedProject.link && (
-                    <a
-                      href={selectedProject.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-danger"
-                    >
-                      View Project
-                    </a>
                   )}
                 </div>
               </div>
