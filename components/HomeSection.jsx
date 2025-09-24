@@ -14,8 +14,8 @@ export default function HomeSection() {
             <Image
               src="/mainphoto.jpg"
               alt="Allen Yanga"
-              width={300}
-              height={300}
+              width={350}
+              height={350}
               className="rounded-circle shadow-lg img-fluid"
               priority
             />
@@ -25,7 +25,7 @@ export default function HomeSection() {
           <div className="col-md-8 order-2 order-md-1 text-center text-md-start">
             <h5 className="mb-2">👋 Hi, I’m Allen</h5>
             <h1 className="mb-3">
-              I’m a Full-Stack Developer, QA Tester, and Web Enthusiast.
+              Full-Stack Developer | QA Tester | Web Enthusiast
             </h1>
             <p className="lead">
               I design, build, and test modern web apps with clean, reliable
