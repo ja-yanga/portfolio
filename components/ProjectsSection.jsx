@@ -9,7 +9,7 @@ export default function ProjectsSection() {
       title: "My Portfolio",
       description: "Portfolio Web App showcasing projects and skills.",
       images: ["/portfolio.png"],
-      link: "/",
+      link: "https://jonallenyanga.vercel.app/",
       technologies: ["Next.js", "React.js", "Bootstrap", "CSS"],
       role: [
         "Designed and developed personal portfolio website",
