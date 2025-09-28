@@ -37,15 +37,6 @@ export default function ContactsSection() {
                     https://www.linkedin.com/in/jon-allen-yanga-7702a5320/
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="/JonAllenCapulongYanga_Resume.pdf"
-                    download
-                    className="btn btn-danger btn-sm mt-2"
-                  >
-                    Download My Resume
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
