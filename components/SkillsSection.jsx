@@ -53,6 +53,7 @@ export default function SkillsSection() {
               <li>MongoDB</li>
               <li>MySQL</li>
               <li>Firebase</li>
+              <li>Supabase (PostgreSQL)</li>
             </ul>
           </div>
 
